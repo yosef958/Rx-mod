@@ -1,0 +1,68 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>تقديم إدارة</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card intro-card" id="introCard" aria-hidden="false">
+      <h1 class="title">تقديم على الإدارة</h1>
+      <p class="subtitle">اضغط التقديم وابدأ رحلتك معنا ✨</p>
+      <button id="openApplyBtn" class="btn primary">تقديم</button>
+    </section>
+    <section class="card apply-card hidden" id="applyCard" aria-hidden="true">
+      <div class="card-header">
+        <h2>نموذج التقديم</h2>
+        <button id="closeApply" class="btn icon">&times;</button>
+      </div>
+      
+
+      <form id="applyForm" autocomplete="off">
+        <label>ما هو اسمك؟
+          <input name="name" id="name" type="text" placeholder="مثال: محمد" required />
+        </label>
+
+        <label>كم عمرك؟
+          <input name="age" id="age" type="number" min="8" max="40" placeholder="مثال: 18" required />
+        </label>
+
+        <label>من أين أنت؟
+          <input name="location" id="location" type="text" placeholder="" required />
+        </label>
+
+        <label>ما خبراتك؟
+          <textarea name="experience" id="experience" rows="3" placeholder="مثال: إدارة مجتمعات، ميديا، بوتات..." required></textarea>
+        </label>
+
+        <label>بماذا ستفيدنا؟
+          <textarea name="value" id="value" rows="3" placeholder="لماذا نحتاجك؟" required></textarea>
+        </label>
+
+        <label>ما هو يوزرك / الأيدي الخاص بك بالديسكورد؟
+          <input name="discord" id="discord" type="text" placeholder="" required />
+        </label>
+
+        <div class="form-actions">
+          
+          <button id="clearBtn" type="button" class="btn secondary">مسح البيانات</button>
+          
+          <button id="submitBtn" type="submit" class="btn primary">إرسال التقديم</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <div id="customAlert" class="custom-alert hidden" role="status" aria-live="polite">
+    <div class="alert-content">
+      <strong>✅️ تم ارسال تقديمك</strong>
+      <p>يرجى انتظار النتيجة، سيتم إعلامك بقبولك أو رفضك</p>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
